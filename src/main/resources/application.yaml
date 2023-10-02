@@ -1,0 +1,29 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /api/v1
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:9966/sempdb
+    username: admin
+    password: admin321
+  jpa:
+    hibernate:
+      ddl-auto: update
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+  mail:
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+    host: smtp.gmail.com
+    port: '587'
+    username: 'nnpdatestupce@gmail.com'
+    password: 'oujg wnvq mnit prxl'
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
